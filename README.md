@@ -15,7 +15,11 @@ php artisan migrate:fresh
 
 Takodje mozete da koristite ugradjene seed-ere umjesto da rucno kucate podatke 
 
+```bash
 php artisan db:seed
+```
 
 Pokretanje aplikacije se vrse normalno preko 
+```bash
 php artisan serve
+```
