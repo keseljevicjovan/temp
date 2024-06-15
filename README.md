@@ -13,13 +13,22 @@ composer install
 php artisan migrate:fresh
 ```
 
-Takodje mozete da koristite ugradjene seed-ere umjesto da rucno kucate podatke 
+Takodje mozete da koristite ugradjene seed-ere umjesto da rucno kucate podatke.
+Napomena: Koriscenje seed-era je neophodno kako bi se kreirale i kategorije za postove:
 
 ```bash
 php artisan db:seed
 ```
 
-Pokretanje aplikacije se vrse normalno preko 
+Kako bi pokrenuli aplikaciju:
 ```bash
 php artisan serve
 ```
+
+## Autorizacija
+
+Aplikacija koristi custom sistem za autorizaciju zajedno uz laravelov auth sistem.
+Postoje 3 vrste korisnika:
+- Guest (ili gost) - Moze samo da gleda postove na stranici.
+- User - Ovo je default nalog koji se pravi na signup stranici. Moze da mijenja, brise, pravi i gleda tudje i svoje postove.
+- Admin (Superadmin) - Administrator koji ima sve permisije nad stranicom. Ima pristup admin panelu koji mu dava permisije da mijenja sve postove, kao i druge naloge. Moze da dava i oduzima permisije drugim nalozima.
